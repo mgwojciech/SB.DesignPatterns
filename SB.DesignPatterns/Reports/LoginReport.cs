@@ -19,7 +19,6 @@ namespace SB.DesignPatterns.Reports
             DataTable table = SetColumns();
             IEnumerable<User> usersInReport = GetData(provider);
             ProcessData(table, usersInReport);
-            return table;
 
             XLWorkbook reportWorkBook = new XLWorkbook();
             reportWorkBook.AddWorksheet(table);
